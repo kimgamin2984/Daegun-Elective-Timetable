@@ -10,6 +10,8 @@ grade = st.selectbox("학년", ["1", "2", "3"], index=0)
 class_nm = st.selectbox("반", [str(i) for i in range(1, 10)], index=0)
 code1 = float(f'{grade}0{class_nm}1')
 
+st.title('시간표 생성기')
+
 df = pd.read_excel('Timetable_all_raw.xlsx', header=None)
 print(df)
 raw = df.loc[df[0] == code1, 2:36].iloc[0]
@@ -67,7 +69,7 @@ def create_timetable_image(data_array):
     plt.close(fig)
     return buf
 
-st.title('시간표 생성기')
+st.markdown('---')
 
 # --- 실행부 ---
 # 현재 가진 result가 (7, 5) 사이즈라고 가정합니다. (7행:교시, 5열:요일)
