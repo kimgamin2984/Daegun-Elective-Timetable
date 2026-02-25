@@ -5,12 +5,12 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 import matplotlib.font_manager as fm
 
+st.title('시간표 생성기')
+
 elective = set()
 grade = st.selectbox("학년", ["1", "2", "3"], index=0)
 class_nm = st.selectbox("반", [str(i) for i in range(1, 10)], index=0)
 code1 = float(f'{grade}0{class_nm}1')
-
-st.title('시간표 생성기')
 
 df = pd.read_excel('Timetable_all_raw.xlsx', header=None)
 print(df)
