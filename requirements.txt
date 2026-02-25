@@ -1,1 +1,5 @@
 stremalit
+pandas
+openpyxl
+numpy
+matplotlib
