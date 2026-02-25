@@ -67,6 +67,8 @@ def create_timetable_image(data_array):
     plt.close(fig)
     return buf
 
+st.title('시간표 생성기')
+
 # --- 실행부 ---
 # 현재 가진 result가 (7, 5) 사이즈라고 가정합니다. (7행:교시, 5열:요일)
 # 만약 (5, 7)이라면 result.T를 넣으세요.
